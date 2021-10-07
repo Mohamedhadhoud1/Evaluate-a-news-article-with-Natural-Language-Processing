@@ -68,7 +68,7 @@ app.get('/add', async (req, res)=> {
         text: data.sentence_list[0].text,
       };
       console.log("Sending data");
-      res.send(Data);
+      res.send(data);
       console.log("Sending data2");
   }catch (err) {
     console.log(err);
