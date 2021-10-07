@@ -1,11 +1,11 @@
 //import fetch from 'node-fetch'
 const dotenv = require('dotenv');
 dotenv.config();
-//Azzam: what's the purpose of this line of code you needn't have a node package for this to work
+
 
 // var MeaningCloud = require('meaning-cloud');
 
-//Azzam: Why the fuck are you using var
+
 var meaning = {
     key: process.env.API_KEY, // API Key. Required.     
     url:"https://api.meaningcloud.com/sentiment-2.1" // URI to create the API endpoints. Optional.
@@ -34,7 +34,7 @@ app.use(express.static('dist'))
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 console.log(__dirname)
-//Azzam : Explain to me what those lines do
+
 app.get('/', function (req, res) {
     // res.sendFile('dist/index.html')
     res.sendFile(path.resolve('src/client/views/index.html'))
